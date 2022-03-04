@@ -1,7 +1,3 @@
-//Для того, чтобы не создавался еще один css файл(в данном случае
-//создастся файл nullstyle.css в папке css, нужно задавать имя подключаемым файлам
-//с "_" впереди, а импортировать без расширения
-//Пример: @import "_nullstyle"
 // Файл обнуляющих стилей
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
@@ -44,7 +40,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	padding: 0 120px 0px 70px;
+	padding: 0 100px 0px 70px;
 	flex: 1 1 auto;
 }
 @media (max-width: 400px) {
