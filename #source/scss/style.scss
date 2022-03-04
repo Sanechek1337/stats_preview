@@ -1,0 +1,157 @@
+//Для того, чтобы не создавался еще один css файл(в данном случае
+//создастся файл nullstyle.css в папке css, нужно задавать имя подключаемым файлам
+//с "_" впереди, а импортировать без расширения
+//Пример: @import "_nullstyle"
+// Файл обнуляющих стилей
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+@import "_nullstyle";
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: "Inter", sans-serif;
+	background: hsl(233, 47%, 7%);
+}
+
+.wrapper {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.statscard {
+	display: flex;
+	max-width: 1100px;
+	flex-direction: row;
+	background: hsl(244, 38%, 16%);
+	border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+	.wrapper {
+		padding: 20px;
+	}
+	.statscard {
+		max-width: 360px;
+		flex-direction: column-reverse;
+	}
+}
+
+.infoblock {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 0 120px 0px 70px;
+	flex: 1 1 auto;
+}
+@media (max-width: 400px) {
+	.infoblock {
+		padding: 30px 30px;
+		gap: 40px;
+		text-align: center;
+	}
+}
+
+.textblock {
+	display: flex;
+	flex-direction: column;
+}
+.lable {
+	color: hsl(0, 0%, 100%);
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 150%;
+	letter-spacing: 1.2px;
+	word-spacing: 4px;
+	margin: 0px 0px 20px 0px;
+}
+@media (max-width: 400px) {
+	.lable {
+		font-size: 24px;
+	}
+}
+.insight {
+	color: hsl(277, 64%, 61%);
+}
+.description {
+	color: hsla(0, 0%, 100%, 0.75);
+	font-size: 16px;
+	line-height: 26px;
+	font-family: "Lexend Deca", sans-serif;
+}
+@media (max-width: 400px) {
+	.description {
+		font-size: 14px;
+	}
+}
+
+.statsblock {
+	display: flex;
+	gap: 60px;
+}
+@media (max-width: 400px) {
+	.statsblock {
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+	}
+}
+
+.stats_heading {
+	display: block;
+	color: hsl(0, 0%, 100%);
+	font-size: 26px;
+	font-weight: 700;
+	margin: 0px 0px 10px 0px;
+}
+.statsblock__stats {
+	color: hsla(0, 0%, 100%, 0.6);
+	font-size: 14px;
+}
+@media (max-width: 400px) {
+	.stats_heading {
+		font-size: 18px;
+	}
+	.statsblock__stats {
+		font-size: 12px;
+	}
+}
+.mainimage {
+	flex: 1 1 49%;
+	position: relative;
+}
+
+.mainimage::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(122, 0, 197, 0.5);
+	border-radius: 0px 10px 10px 0px;
+}
+
+.image {
+	border-radius: 0px 10px 10px 0px;
+}
+@media (max-width: 400px) {
+	.image {
+		max-width: 100%;
+		border-radius: 10px 10px 0px 0px;
+	}
+	.mainimage::before {
+		border-radius: 10px 10px 0px 0px;
+	}
+}
+.attribution {
+	text-align: center;
+	color: hsl(0, 0%, 100%);
+}
+.attribution a {
+	color: hsl(277, 64%, 61%);
+}
